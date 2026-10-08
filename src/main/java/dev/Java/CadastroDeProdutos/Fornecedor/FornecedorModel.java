@@ -2,11 +2,17 @@ package dev.Java.CadastroDeProdutos.Fornecedor;
 
 import dev.Java.CadastroDeProdutos.Produtos.ProdutoModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Table(name = "tb_forncedor")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class FornecedorModel {
 
     @Id

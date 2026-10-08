@@ -3,12 +3,16 @@ package dev.Java.CadastroDeProdutos.Produtos;
 
 import dev.Java.CadastroDeProdutos.Fornecedor.FornecedorModel;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.List;
 
 // Entity transforma uma classe em uma entidade do DB
 @Entity
 @Table(name = "tb_cadastro")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class ProdutoModel {
 
     @Id
@@ -23,47 +27,4 @@ public class ProdutoModel {
     @ManyToOne
     @JoinColumn(name = "forncedor_id") // Foreing Key ou chave estrangeira
     private FornecedorModel fornecedor;
-
-    public ProdutoModel() {
-
-    }
-
-    public ProdutoModel(String nome, String descricao, double preco, int quantidade) {
-        this.nome = nome;
-        this.descricao = descricao;
-        this.preco = preco;
-        this.quantidade = quantidade;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-
-    public int getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
 }
