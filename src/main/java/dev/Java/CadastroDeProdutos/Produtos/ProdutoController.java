@@ -1,4 +1,4 @@
-package dev.Java.CadastroDeProdutos.Produtos.Controller;
+package dev.Java.CadastroDeProdutos.Produtos;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
