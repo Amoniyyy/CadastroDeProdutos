@@ -17,10 +17,19 @@ public class ProdutoModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;   // git commit --amend -> serve para refatorar uma modificação feita no ultimo commit
+    @Column(name = "id_Produto")
+    private Long id;// git commit --amend -> serve para refatorar uma modificação feita no ultimo commit
+
+    @Column(name = "nome")
     private String nome;
+
+    @Column(name = "descricao")
     private String descricao;
+
+    @Column(name = "preco")
     private double preco;
+
+    @Column(name = "quantidade")
     private int quantidade;
 
     @Column(unique = true) // Usar para dados unicos
