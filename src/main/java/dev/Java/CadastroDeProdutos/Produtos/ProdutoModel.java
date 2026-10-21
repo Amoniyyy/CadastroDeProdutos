@@ -13,6 +13,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class ProdutoModel {
 
     @Id
@@ -36,7 +37,7 @@ public class ProdutoModel {
     private String serialnamber;
 
     // @ManyToOne - um produto tem apenas um fornecedor
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "forncedor_id") // Foreing Key ou chave estrangeira
     private FornecedorModel fornecedor;
 }
